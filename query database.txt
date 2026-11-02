@@ -1,0 +1,12 @@
+
+#menggunakan inner join untuk menggabungkan nama pemain penyimpanan dan nama item yang di dalam nya
+select nama_pemain, penyimpanan_id, nama_item
+from pemain join penyimpanan on pemain.pemain_id = penyimpanan.pemain_id join item on penyimpanan.item_id = item.item_id;
+
+#menggunakan left join untuk menampilkan semua yang ada di bagian kiri 
+select nama_pemain, penyimpanan_id
+from pemain left join penyimpanan on pemain.pemain_id = penyimpanan.pemain_id order by pemain.pemain_id desc;
+
+#menggunakan right join untuk menampilkan semua yang ada di bagian kanan
+select nama_item , penyimpanan_id 
+from penyimpanan right join item on penyimpanan.item_id = item.item_id order by item.item_id desc;
